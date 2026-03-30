@@ -13,3 +13,4 @@
  *= require_tree .
  *= require_self
  */
+/* pnpm dlx @tailwindcss/cli -i ./app/assets/stylesheets/input.css -o ./app/assets/stylesheets/output.css --watch */

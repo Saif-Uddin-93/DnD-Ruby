@@ -1,0 +1,62 @@
+/*! tailwindcss v4.2.2 | MIT License | https://tailwindcss.com */
+@layer properties;
+.container {
+  width: 100%;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.flex {
+  display: flex;
+}
+.inline {
+  display: inline;
+}
+.h-\[2rem\] {
+  height: 2rem;
+}
+.h-screen {
+  height: 100vh;
+}
+.w-1\/2 {
+  width: calc(1 / 2 * 100%);
+}
+.w-\[2rem\] {
+  width: 2rem;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.border-2 {
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+}
+.border-solid {
+  --tw-border-style: solid;
+  border-style: solid;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+    }
+  }
+}
