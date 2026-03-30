@@ -23,6 +23,8 @@ default: &default
 development:
   <<: *default
   database: dnd_ruby_development
+  username: root
+  host: localhost
 
 test:
   <<: *default
