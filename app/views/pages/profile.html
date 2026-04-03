@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestGem | The Ultimate D&D Campaign Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'MedievalSharp', cursive; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-blur {
+            background: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <nav class="flex items-center justify-between px-8 py-6 bg-gray-900 border-b border-gray-800">
+        <div class="text-2xl font-bold text-yellow-500 tracking-wider">QUESTLOG</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="#features" class="hover:text-yellow-500 transition">Features</a>
+            <a href="#campaigns" class="hover:text-yellow-500 transition">Campaigns</a>
+            <a href="#pricing" class="hover:text-yellow-500 transition">Pricing</a>
+        </div>
+        <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded font-bold transition">
+            GET STARTED
+        </button>
+    </nav>
+
+    <section class="hero-gradient h-[80vh] flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-5xl md:text-7xl text-yellow-500 mb-6">Forge Your Legend.</h1>
+        <p class="text-xl md:text-2xl max-w-2xl text-gray-300 mb-10">
+            Stop digging through stacks of paper. Track your party’s progress, manage character sheets, and chronicle your world in one enchanted interface.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-10 py-4 rounded-lg text-lg font-bold shadow-lg transition">
+                Start Tracking Free
+            </button>
+            <button class="bg-transparent border border-white hover:bg-white hover:text-black px-10 py-4 rounded-lg text-lg font-bold transition">
+                Watch Demo
+            </button>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl text-yellow-500 mb-4">Master Your Adventure</h2>
+            <p class="text-gray-400">Everything a Dungeon Master or Player needs to stay immersed.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card-blur p-8 rounded-xl text-center">
+                <div class="text-4xl mb-4">⚔️</div>
+                <h3 class="text-2xl mb-4 text-yellow-200">Dynamic Character Sheets</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Auto-calculating stats, spell slots, and inventory. Level up with a single click without touching a calculator.
+                </p>
+            </div>
+
+            <div class="card-blur p-8 rounded-xl text-center">
+                <div class="text-4xl mb-4">📜</div>
+                <h3 class="text-2xl mb-4 text-yellow-200">World Chronology</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    A shared timeline for your campaign. Record NPCs met, cities visited, and those "natural 1" moments you'll never forget.
+                </p>
+            </div>
+
+            <div class="card-blur p-8 rounded-xl text-center">
+                <div class="text-4xl mb-4">🎲</div>
+                <h3 class="text-2xl mb-4 text-yellow-200">Real-Time Dice Sync</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Roll within the app and see the results instantly in the DM's log. Perfect for remote sessions or hybrid play.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="campaigns" class="bg-gray-800 py-20 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl text-yellow-500 mb-6">The DM's Command Center</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-yellow-500 mr-3">✦</span>
+                        <span>Track Initiative and Combat rounds effortlessly.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-yellow-500 mr-3">✦</span>
+                        <span>Manage hidden NPC stats and private DM notes.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-yellow-500 mr-3">✦</span>
+                        <span>Generate loot tables and random encounters on the fly.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:w-1/2">
+                <div class="bg-gray-900 p-4 rounded-lg shadow-2xl border border-gray-700">
+                    <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800" alt="App Preview" class="rounded border border-gray-800">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-800 text-center">
+        <div class="text-xl font-bold text-yellow-600 mb-4 uppercase tracking-tighter">QuestLog</div>
+        <p class="text-gray-500 text-sm">© 2024 QuestLog Companion. Not affiliated with Wizards of the Coast.</p>
+        <div class="mt-6 flex justify-center space-x-6 text-gray-400">
+            <a href="#" class="hover:text-white">Twitter</a>
+            <a href="#" class="hover:text-white">Discord</a>
+            <a href="#" class="hover:text-white">Support</a>
+        </div>
+    </footer>
+
+</body>
+</html>
