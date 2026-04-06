@@ -30,15 +30,21 @@
 </head>
 <body class="bg-gray-900 text-gray-100">
 
-    <nav class="flex items-center justify-between px-8 py-6 bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
-        <div class="text-2xl font-bold text-yellow-500 tracking-wider">QUESTGEM</div>
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+    <nav class="flex items-center px-8 py-6 bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+        <div class="flex-1">
+            <div class="text-2xl font-bold text-yellow-500 tracking-wider">QUESTGEM</div>
+        </div>
+
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest justify-center">
             <a href="#features" class="hover:text-yellow-500 transition">Features</a>
             <a href="#campaigns" class="hover:text-yellow-500 transition">Campaigns</a>
         </div>
-        <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded font-bold transition">
-            Profile
-        </button>
+
+        <div class="flex-1 flex justify-end">
+            <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded font-bold transition">
+                Profile
+            </button>
+        </div>
     </nav>
 
     <section id="character-creation-panel" class="hero-gradient min-h-[85vh] flex flex-col items-center justify-center text-center px-4 py-16">
