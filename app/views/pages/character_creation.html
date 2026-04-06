@@ -49,45 +49,88 @@
 
     <section id="character-creation-panel" class="hero-gradient min-h-[85vh] flex flex-col items-center justify-center text-center px-4 py-16">
     <h1 class="text-5xl md:text-7xl text-yellow-500 mb-6">Create Your Character</h1>
-        <p class="text-xl md:text-2xl max-w-2xl text-gray-300 mb-10">
-            Begin your adventure by crafting a unique character. Choose your race, class, and background to bring your hero to life. Customize your stats, skills, and appearance for your character.
-        </p>
-            <div class="w-full flex flex-row items-center justify-evenly gap-2 p-8 justify-center p-8">
-                <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-lg transition active:scale-95">
-                    &lt;
-                </button>
+    <p class="text-xl md:text-2xl max-w-2xl text-gray-300 mb-10">
+        Begin your adventure by crafting a unique character. Choose your race, class, and background to bring your hero to life.
+    </p>
 
-                <div id="avatar-icon" class="shrink-0 rounded-full border-4 border-yellow-500 p-2 bg-gray-800 w-32 h-32 md:w-48 md:h-48 flex items-center justify-center">
-                    <img src="https://images.unsplash.com/photo-1633506079263-7029b4f46762?auto=format&fit=crop&q=80&w=200&h=200" alt="Character Avatar" class="rounded-full border border-gray-700 object-cover">    
+    <div class="w-full flex flex-row items-center justify-center gap-4 md:gap-8 p-8">
+        <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-4 rounded-lg text-lg font-bold shadow-lg transition active:scale-95">
+            &lt;
+        </button>
+        <div id="avatar-icon" class="shrink-0 rounded-full border-4 border-yellow-500 p-2 bg-gray-800 w-32 h-32 md:w-48 md:h-48 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1633506079263-7029b4f46762?auto=format&fit=crop&q=80&w=200&h=200" alt="Character Avatar" class="rounded-full border border-gray-700 object-cover w-full h-full">    
+        </div>
+        <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-4 rounded-lg text-lg font-bold shadow-lg transition active:scale-95">
+            &gt;
+        </button>
+    </div>
+
+    <form class="w-full max-w-4xl mx-auto mt-8 bg-gray-800 p-8 rounded-lg border border-gray-700 shadow-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+            
+            <div class="space-y-4">
+                <h3 class="text-xl text-yellow-500 border-b border-gray-700 pb-2">Lore</h3>
+                
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Character Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter name..." class="w-full px-3 py-2 bg-gray-900 text-gray-100 rounded border border-gray-700 focus:ring-2 focus:ring-yellow-500 outline-none">
                 </div>
 
-                <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-lg transition active:scale-95">
-                    &gt;
-                </button>
-            </div>
-            <form class="w-full max-w-md mx-auto mt-8 bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-2xl">
-                <div class="mb-4 text-left"> <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Character Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter name..." class="w-full px-3 py-2 bg-gray-700 text-gray-100 rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 mb-4">
-
-                    <label for="race" class="block text-sm font-medium text-gray-300 mb-1">Race</label>
-                    <select id="race" name="race" class="w-full px-3 py-2 bg-gray-700 text-gray-100 rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 mb-4">
+                <div>
+                    <label for="race" class="block text-sm font-medium text-gray-400 mb-1">Race</label>
+                    <select id="race" name="race" class="w-full px-3 py-2 bg-gray-900 text-gray-100 rounded border border-gray-700 focus:ring-2 focus:ring-yellow-500 outline-none">
                         <option value="" disabled selected>Select a race</option>
                         <option value="human">Human</option>
                         <option value="elf">Elf</option>
                         <option value="dwarf">Dwarf</option>
                     </select>
+                </div>
 
-                    <label for="class" class="block text-sm font-medium text-gray-300 mb-1">Class</label>
-                    <select id="class" name="class" class="w-full px-3 py-2 bg-gray-700 text-gray-100 rounded border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                <div>
+                    <label for="class" class="block text-sm font-medium text-gray-400 mb-1">Class</label>
+                    <select id="class" name="class" class="w-full px-3 py-2 bg-gray-900 text-gray-100 rounded border border-gray-700 focus:ring-2 focus:ring-yellow-500 outline-none">
                         <option value="" disabled selected>Select a class</option>
                         <option value="fighter">Fighter</option>    
                         <option value="wizard">Wizard</option>
                         <option value="rogue">Rogue</option>
                     </select>
-
                 </div>
-            </form>
-    </section>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex justify-between items-end border-b border-gray-700 pb-2">
+                    <h3 class="text-xl text-yellow-500">Attributes</h3>
+                    <span class="text-xs font-bold text-yellow-600 bg-yellow-500/10 px-2 py-1 rounded">20 POINTS REMAINING</span>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Strength</label>
+                        <input type="number" min="0" max="20" value="0" class="w-full px-3 py-2 bg-gray-900 text-gray-100 rounded border border-gray-700 focus:ring-2 focus:ring-red-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Vitality</label>
+                        <input type="number" min="0" max="20" value="0" class="w-full px-3 py-2 bg-gray-900 text-gray-100 rounded border border-gray-700 focus:ring-2 focus:ring-green-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Intelligence</label>
+                        <input type="number" min="0" max="20" value="0" class="w-full px-3 py-2 bg-gray-900 text-gray-100 rounded border border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-gray-400 mb-1">Agility</label>
+                        <input type="number" min="0" max="20" value="0" class="w-full px-3 py-2 bg-gray-900 text-gray-100 rounded border border-gray-700 focus:ring-2 focus:ring-orange-500 outline-none">
+                    </div>
+                </div>
+
+                <p class="text-[10px] text-gray-500 italic mt-2 text-center">Max 20 points per attribute.</p>
+            </div>
+        </div>
+
+        <button type="submit" class="mt-10 w-full bg-yellow-600 hover:bg-yellow-500 text-gray-900 font-black py-4 rounded uppercase tracking-widest transition shadow-lg">
+            Finalize Character
+        </button>
+    </form>
+</section>
 
     <section id="features" class="py-20 px-8 max-w-7xl mx-auto">
         <div class="text-center mb-16">
