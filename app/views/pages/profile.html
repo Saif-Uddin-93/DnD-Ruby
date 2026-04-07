@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuestGem | The Ultimate D&D Campaign Companion</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -24,25 +25,29 @@
 <body class="bg-gray-900 text-gray-100">
 
     <nav class="flex items-center justify-between px-8 py-6 bg-gray-900 border-b border-gray-800">
-        <div class="text-2xl font-bold text-yellow-500 tracking-wider">QUESTLOG</div>
+        <div class="text-2xl font-bold text-yellow-500 tracking-wider">QuestGem</div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
-            <a href="#features" class="hover:text-yellow-500 transition">Features</a>
-            <a href="#campaigns" class="hover:text-yellow-500 transition">Campaigns</a>
-            <a href="#pricing" class="hover:text-yellow-500 transition">Pricing</a>
+            <a href="#features" class="hover:text-yellow-500 transition">Home</a>
+            <a href="#campaigns" class="hover:text-yellow-500 transition">About</a>
+            <a href="#campaigns" class="hover:text-yellow-500 transition">Contact</a>
+            <!-- <a href="#pricing" class="hover:text-yellow-500 transition">Pricing</a> -->
         </div>
-        <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded font-bold transition">
-            GET STARTED
+        <button id="login-btn" class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded font-bold transition">
+            LOGIN / SIGN UP
         </button>
     </nav>
 
     <section class="hero-gradient h-[80vh] flex flex-col items-center justify-center text-center px-4">
         <h1 class="text-5xl md:text-7xl text-yellow-500 mb-6">Forge Your Legend.</h1>
         <p class="text-xl md:text-2xl max-w-2xl text-gray-300 mb-10">
-            Stop digging through stacks of paper. Track your party’s progress, manage character sheets, and chronicle your world in one enchanted interface.
+            Stop digging through stacks of paper. Track your party's progress, manage character sheets, and chronicle your world in one enchanted interface.
         </p>
         <div class="flex flex-col md:flex-row gap-4">
             <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-10 py-4 rounded-lg text-lg font-bold shadow-lg transition">
-                Start Tracking Free
+                Campaigns
+            </button>
+            <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-10 py-4 rounded-lg text-lg font-bold shadow-lg transition">
+                Characters
             </button>
             <button class="bg-transparent border border-white hover:bg-white hover:text-black px-10 py-4 rounded-lg text-lg font-bold transition">
                 Watch Demo
@@ -102,23 +107,23 @@
                     </li>
                 </ul>
             </div>
-            <div class="md:w-1/2">
+            <!-- <div class="md:w-1/2">
                 <div class="bg-gray-900 p-4 rounded-lg shadow-2xl border border-gray-700">
                     <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800" alt="App Preview" class="rounded border border-gray-800">
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <footer class="py-12 border-t border-gray-800 text-center">
-        <div class="text-xl font-bold text-yellow-600 mb-4 uppercase tracking-tighter">QuestLog</div>
-        <p class="text-gray-500 text-sm">© 2024 QuestLog Companion. Not affiliated with Wizards of the Coast.</p>
+        <div class="text-xl font-bold text-yellow-600 mb-4 uppercase tracking-tighter">GemLog</div>
+        <p class="text-gray-500 text-sm">© 2026 GemLog Companion. Not affiliated with Wizards of the Coast.</p>
         <div class="mt-6 flex justify-center space-x-6 text-gray-400">
-            <a href="#" class="hover:text-white">Twitter</a>
+            <a href="#" class="hover:text-white">X</a>
             <a href="#" class="hover:text-white">Discord</a>
             <a href="#" class="hover:text-white">Support</a>
         </div>
     </footer>
-
+    <script type="text/javascript" src="../../javascript/application.js"></script>
 </body>
 </html>
