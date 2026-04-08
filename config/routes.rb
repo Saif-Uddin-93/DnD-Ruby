@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "pages#home"
 
-
   get "home", to: "pages#home"
-  get "structure", to: "pages#structure"
   get "about", to: "pages#about"
   get "profile", to: "pages#profile"
   get "character_creation", to: "pages#character_creation"
