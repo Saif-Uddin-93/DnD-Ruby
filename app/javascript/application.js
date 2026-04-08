@@ -1,9 +1,6 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
 
-// $(document).ready(function () {
-$(document).on("turbo:load", function() {
+$(document).ready(function (){
+    console.log("Turbo loaded!");
     var loginBtn = $("#profile-btn");
     loginBtn.click(function () {
         Turbo.visit("/profile");
