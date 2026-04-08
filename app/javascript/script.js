@@ -8,23 +8,37 @@ $(document).ready(function (){
         "https://images.unsplash.com/photo-1653368653487-f55b96d90853?auto=format&fit=crop&q=80&w=200&h=200",
     ]
 
-    let loginBtn = $("#profile-btn");
+    const avatarIconElement = $("#avatar-icon img");
+    let currentAvatarIndex = 0;
+
+    const updateAvatarIcon = (index) => {
+        if (index >= avatarIcons.length) {
+            currentAvatarIndex = 0;
+        } else if (index < 0) {
+            currentAvatarIndex = avatarIcons.length-1;
+        } else {
+            currentAvatarIndex = index;
+        }
+        avatarIconElement.attr("src", avatarIcons[currentAvatarIndex]);
+    };
+
+    const loginBtn = $("#profile-btn");
     loginBtn.click(function () {
         Turbo.visit("/profile");
     });
 
-    let charactersBtn = $("#characters-btn");
+    const charactersBtn = $("#characters-btn");
     charactersBtn.click(function () {
         Turbo.visit("/character_creation");
     });
 
-    let prevAvatarBtn = $("#prev-avatar-btn");
+    const prevAvatarBtn = $("#prev-avatar-btn");
     prevAvatarBtn.click(function () {
-        // Handle previous avatar logic
+        updateAvatarIcon(currentAvatarIndex - 1);
     });
 
-    let nextAvatarBtn = $("#next-avatar-btn");
+    const nextAvatarBtn = $("#next-avatar-btn");
     nextAvatarBtn.click(function () {
-        // Handle next avatar logic
+        updateAvatarIcon(currentAvatarIndex + 1);
     });
 });
