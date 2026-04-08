@@ -2,9 +2,10 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-$(document).ready(function () {
-    var loginBtn = $("#login-btn");
+// $(document).ready(function () {
+$(document).on("turbo:load", function() {
+    var loginBtn = $("#profile-btn");
     loginBtn.click(function () {
-        
+        Turbo.visit("/profile");
     });
 });
