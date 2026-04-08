@@ -38,8 +38,9 @@
         </div>
 
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest justify-center">
-            <a href="#features" class="hover:text-yellow-500 transition">Features</a>
-            <a href="#campaigns" class="hover:text-yellow-500 transition">Campaigns</a>
+            <%= link_to "Home", root_path, class: "hover:text-yellow-500 transition" %>
+            <%= link_to "Features", profile_path, class: "hover:text-yellow-500 transition" %>
+            <%= link_to "Campaigns", character_creation_path, class: "hover:text-yellow-500 transition" %>
         </div>
 
         <div class="flex-1 flex justify-end">
