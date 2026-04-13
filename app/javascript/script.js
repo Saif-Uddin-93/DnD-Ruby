@@ -24,7 +24,7 @@ $(document).ready(function (){
 
     const loginBtn = $("#profile-btn");
     loginBtn.click(function () {
-        Turbo.visit("/profile");
+        Turbo.visit("/login");
     });
 
     const charactersBtn = $("#characters-btn");
