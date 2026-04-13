@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 
   def character_creation
   end
+
+  def login
+  end
+
 end

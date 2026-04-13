@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "profile", to: "pages#profile"
   get "character_creation", to: "pages#character_creation"
+  get "login", to: "pages#login"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
