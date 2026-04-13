@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <%= render "shared/head" %>
-  <body class="bg-gray-900 text-gray-100">
+  <body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
     <%= render "shared/navbar" %>
-    <%= yield %>
+    
+    <main class="flex-grow">
+      <%= yield %>
+    </main>
+
     <%= render "shared/footer" %>
     <script src="<%= asset_path('script.js') %>"></script>
   </body>
