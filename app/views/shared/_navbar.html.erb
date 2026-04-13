@@ -1,0 +1,17 @@
+<nav class="flex items-center px-8 py-6 bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <div class="flex-1">
+        <div class="text-2xl font-bold text-yellow-500 tracking-wider">DnD Ruby</div>
+    </div>
+
+    <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest justify-center">
+        <%= link_to "Home", root_path, class: "hover:text-yellow-500 transition" %>
+        <%= link_to "Features", profile_path, class: "hover:text-yellow-500 transition" %>
+        <%= link_to "Campaigns", character_creation_path, class: "hover:text-yellow-500 transition" %>
+    </div>
+
+    <div class="flex-1 flex justify-end">
+        <button id="profile-btn" class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded font-bold transition">
+            Profile
+        </button>
+    </div>
+</nav>
