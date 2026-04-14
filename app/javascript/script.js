@@ -41,4 +41,23 @@ $(document).ready(function (){
     nextAvatarBtn.click(function () {
         updateAvatarIcon(currentAvatarIndex + 1);
     });
+    
+    const loginForm = $("#login-form");
+    loginForm.on('submit', function(e) {
+    e.preventDefault();
+
+    const payload = {
+      login_identity: $('#login_field').val(), // Can be email or username
+      password: $('#password').val(),
+      authenticity_token: $('meta[name="csrf-token"]').attr('content')
+    };
+
+    $.post('/login', payload)
+      .done(function(data) {
+        window.location.href = '/dashboard';
+      })
+      .fail(function(xhr) {
+        $('#message').text(xhr.responseJSON.message).addClass('error-text');
+      });
+  });
 });
