@@ -13,4 +13,10 @@ class SessionsController < ApplicationController
       render json: { status: 'error', message: 'Invalid credentials or inactive account' }, status: :unauthorized
     end
   end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to login_path
+  end
+
 end
