@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "profile", to: "pages#profile"
   get "character_creation", to: "pages#character_creation"
   get "login", to: "pages#login"
+  get "sign_up", to: "pages#sign_up"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

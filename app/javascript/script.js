@@ -32,6 +32,11 @@ $(document).ready(function (){
         Turbo.visit("/dashboard");
     });
 
+    const signUpBtn = $("#sign-up-btn");
+    signUpBtn.click(function () {
+        Turbo.visit("/sign_up");
+    });
+
     const charactersBtn = $("#characters-btn");
     charactersBtn.click(function () {
         Turbo.visit("/character_creation");
