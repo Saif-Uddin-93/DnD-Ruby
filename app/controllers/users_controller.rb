@@ -1,11 +1,13 @@
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
   def create
+    # Take the part before the @ in the email as a temporary username
+    temp_username = params[:email].split('@').first
     # We use the password_hash logic defined in your User model
     @user = User.new(
       email: params[:email],
       password: params[:password],
-      username: params[:email].split('@').first, # Default username from email
+      username: temp_username, # Default username from email
       is_active: true
     )
 
