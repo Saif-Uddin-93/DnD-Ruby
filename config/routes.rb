@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get "profile", to: "pages#profile"
   get "character_creation", to: "pages#character_creation"
   get "login", to: "pages#login"
-  get "login", to: "sessions#new"
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
   get "sign_up", to: "pages#sign_up"
