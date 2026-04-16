@@ -1,4 +1,35 @@
 $(document).on('turbo:load', function() {
+
+    const avatarIcons = [
+        "https://images.unsplash.com/photo-1633506079263-7029b4f46762?auto=format&fit=crop&q=80&w=200&h=200",
+        "https://images.unsplash.com/photo-1657851613794-13616dbcc247?auto=format&fit=crop&q=80&w=200&h=200",
+        "https://images.unsplash.com/photo-1743247299142-35028faf885d?auto=format&fit=crop&q=80&w=200&h=200",
+        "https://images.unsplash.com/photo-1653368653487-f55b96d90853?auto=format&fit=crop&q=80&w=200&h=200",
+    ]
+
+    const avatarIconElement = $("#avatar-icon img");
+    let currentAvatarIndex = 0;
+
+    const updateAvatarIcon = (index) => {
+        if (index >= avatarIcons.length) {
+            currentAvatarIndex = 0;
+        } else if (index < 0) {
+            currentAvatarIndex = avatarIcons.length-1;
+        } else {
+            currentAvatarIndex = index;
+        }
+        avatarIconElement.attr("src", avatarIcons[currentAvatarIndex]);
+    };
+
+    // --- Button Navigations (using Turbo.visit) ---
+    $("#profile-btn").on('click', () => Turbo.visit("/login"));
+    $("#enter-btn").on('click', () => Turbo.visit("/dashboard"));
+    $("#sign-up-btn").on('click', () => Turbo.visit("/sign_up"));
+    $("#characters-btn").on('click', () => Turbo.visit("/character_creation"));
+
+    $("#prev-avatar-btn").on('click', () => updateAvatarIcon(currentAvatarIndex - 1));
+    $("#next-avatar-btn").on('click', () => updateAvatarIcon(currentAvatarIndex + 1));
+    
     const signUpForm = document.querySelector('form[action="/sign_up_process"]');
 
     if (signUpForm) {
