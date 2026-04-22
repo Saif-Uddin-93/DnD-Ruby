@@ -14,7 +14,8 @@
 #
 default: &default
   adapter: postgresql
-  encoding: unicode
+  encoding: utf8
+  template: template0
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -24,7 +25,6 @@ development:
   <<: *default
   database: dnd_ruby_development
   username: root
-  # host: localhost
 
 test:
   <<: *default
