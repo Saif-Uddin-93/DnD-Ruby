@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: dnd_ruby_development
-  username: root
+  username: ruby_admin
 
 test:
   <<: *default
