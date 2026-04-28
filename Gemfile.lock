@@ -107,7 +107,7 @@ GEM
     drb (2.2.3)
     erb (4.0.4)
       cgi (>= 0.3.3)
-    error_highlight (0.7.0)
+    error_highlight (0.7.1)
     erubi (1.13.1)
     globalid (1.3.0)
       activesupport (>= 6.1)
@@ -166,7 +166,10 @@ GEM
     parser (3.3.10.2)
       ast (~> 2.4.1)
       racc
-    pg (1.4.6)
+    pg (1.6.3-aarch64-linux)
+    pg (1.6.3-arm64-darwin)
+    pg (1.6.3-x86_64-darwin)
+    pg (1.6.3-x86_64-linux)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -308,7 +311,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bcrypt (~> 3.1.7)
+  bcrypt (~> 3.1.17)
   bootsnap
   brakeman
   capybara
@@ -316,7 +319,7 @@ DEPENDENCIES
   error_highlight (>= 0.4.0)
   importmap-rails
   jbuilder
-  pg (~> 1.4.5)
+  pg (~> 1.5)
   puma (>= 5.0)
   rails (~> 7.2.3)
   rubocop-rails-omakase
@@ -326,6 +329,9 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
+
+RUBY VERSION
+   ruby 4.0.3p0
 
 BUNDLED WITH
    2.6.9
